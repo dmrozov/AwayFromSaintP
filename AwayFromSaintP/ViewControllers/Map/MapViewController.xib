@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapViewController" customModule="AwayFromSaintP" customModuleProvider="target">
+            <connections>
+                <outlet property="mapView" destination="Kn3-QR-jy7" id="Xr6-4l-35I"/>
+                <outlet property="messageLabel" destination="evX-6X-EwC" id="48l-bA-jLL"/>
+                <outlet property="view" destination="nas-wQ-wQX" id="hUa-p9-QH6"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="nas-wQ-wQX">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" pitchEnabled="NO" showsCompass="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kn3-QR-jy7">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="16"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="vQF-Re-mA6"/>
+                    </connections>
+                </mapView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCY-3Z-CEh">
+                    <rect key="frame" x="16" y="782" width="382" height="50"/>
+                    <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="pVX-TJ-dbU"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                    <state key="normal" title="Передумал">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="cancelButtonClicked:" destination="-1" eventType="touchUpInside" id="7Nh-cl-UXy"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ЛЕТИМ В ГОРОД" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evX-6X-EwC">
+                    <rect key="frame" x="16" y="60" width="382" height="20.5"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="MwM-JP-1nE" firstAttribute="trailing" secondItem="Kn3-QR-jy7" secondAttribute="trailing" id="3cR-uW-KAb"/>
+                <constraint firstItem="evX-6X-EwC" firstAttribute="top" secondItem="nas-wQ-wQX" secondAttribute="topMargin" constant="16" id="4My-QX-QGz"/>
+                <constraint firstAttribute="bottom" secondItem="Kn3-QR-jy7" secondAttribute="bottom" id="DUD-Cz-Bmc"/>
+                <constraint firstItem="lCY-3Z-CEh" firstAttribute="leading" secondItem="MwM-JP-1nE" secondAttribute="leading" constant="16" id="HbX-SU-745"/>
+                <constraint firstItem="MwM-JP-1nE" firstAttribute="bottom" secondItem="lCY-3Z-CEh" secondAttribute="bottom" constant="30" id="MsT-Yz-PcX"/>
+                <constraint firstItem="Kn3-QR-jy7" firstAttribute="leading" secondItem="MwM-JP-1nE" secondAttribute="leading" id="Ny3-Cb-gYJ"/>
+                <constraint firstItem="evX-6X-EwC" firstAttribute="leading" secondItem="MwM-JP-1nE" secondAttribute="leading" constant="16" id="OFr-3l-IaS"/>
+                <constraint firstItem="lCY-3Z-CEh" firstAttribute="trailing" secondItem="MwM-JP-1nE" secondAttribute="trailing" constant="-16" id="efy-mh-AQ7"/>
+                <constraint firstItem="evX-6X-EwC" firstAttribute="trailing" secondItem="MwM-JP-1nE" secondAttribute="trailing" constant="-16" id="gSv-P3-HV1"/>
+                <constraint firstItem="Kn3-QR-jy7" firstAttribute="top" secondItem="nas-wQ-wQX" secondAttribute="top" id="yI9-Od-2g5"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="MwM-JP-1nE"/>
+            <point key="canvasLocation" x="137.68115942028987" y="-570.53571428571422"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="AwayFromSaintP" customModuleProvider="target">
+            <connections>
+                <outlet property="searchBar" destination="dvH-Pz-Eik" id="mHs-SO-Z3J"/>
+                <outlet property="tableView" destination="oqd-bh-yoP" id="vmw-MX-1J7"/>
+                <outlet property="view" destination="cPT-sR-Wes" id="SBd-CV-gwU"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="cPT-sR-Wes">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Город, страна, аэропорт" translatesAutoresizingMaskIntoConstraints="NO" id="dvH-Pz-Eik">
+                    <rect key="frame" x="0.0" y="44" width="293" height="56"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <scopeButtonTitles>
+                        <string>Title</string>
+                        <string>Title</string>
+                    </scopeButtonTitles>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="IVm-ut-LQ5"/>
+                    </connections>
+                </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oqd-bh-yoP">
+                    <rect key="frame" x="0.0" y="100" width="414" height="796"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="n5A-JN-aqu"/>
+                        <outlet property="delegate" destination="-1" id="Hl1-mE-Ibg"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T6P-h1-dcO">
+                    <rect key="frame" x="293" y="44" width="113" height="56"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                    <state key="normal" title="Останусь дома"/>
+                    <connections>
+                        <action selector="cancelButtonClicked:" destination="-1" eventType="touchUpInside" id="IYt-WM-aov"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="dvH-Pz-Eik" firstAttribute="top" secondItem="cPT-sR-Wes" secondAttribute="topMargin" id="CZa-GD-m42"/>
+                <constraint firstItem="oqd-bh-yoP" firstAttribute="top" secondItem="dvH-Pz-Eik" secondAttribute="bottom" id="LRz-QE-gO0"/>
+                <constraint firstAttribute="trailing" secondItem="T6P-h1-dcO" secondAttribute="trailing" constant="8" id="PQr-bb-rQk"/>
+                <constraint firstAttribute="bottom" secondItem="oqd-bh-yoP" secondAttribute="bottom" id="TAK-xq-xDA"/>
+                <constraint firstItem="T6P-h1-dcO" firstAttribute="top" secondItem="cPT-sR-Wes" secondAttribute="topMargin" id="Yoz-2a-RKN"/>
+                <constraint firstItem="dvH-Pz-Eik" firstAttribute="leading" secondItem="VI3-o8-XQa" secondAttribute="leading" id="Z2g-lD-OHP"/>
+                <constraint firstItem="T6P-h1-dcO" firstAttribute="leading" secondItem="dvH-Pz-Eik" secondAttribute="trailing" id="hRQ-B2-H6o"/>
+                <constraint firstItem="oqd-bh-yoP" firstAttribute="trailing" secondItem="VI3-o8-XQa" secondAttribute="trailing" id="ntC-OP-8cZ"/>
+                <constraint firstItem="oqd-bh-yoP" firstAttribute="leading" secondItem="VI3-o8-XQa" secondAttribute="leading" id="px2-sP-yVo"/>
+                <constraint firstItem="oqd-bh-yoP" firstAttribute="top" secondItem="T6P-h1-dcO" secondAttribute="bottom" id="s1o-nb-Hl9"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="VI3-o8-XQa"/>
+            <point key="canvasLocation" x="786.95652173913049" y="109.82142857142857"/>
+        </view>
+    </objects>
+</document>
